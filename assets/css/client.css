@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* *::-webkit-scrollbar{
+    display: none;
+} */
+@font-face {
+    font-family: 'switzer';
+    src: url(../font/switzer/Switzer-Variable.ttf);
+}
+@font-face {
+    font-family: 'santoshi';
+    src: url(../font/santoshi/Satoshi-Variable.ttf);
+}
+:root{
+    --white1: #FFF4F4;
+    --white2: #F5F5F5;
+    --white3: #a2a4a6;
+    --blue: #1f80ff;
+    --pink1:#eb287b;
+    --pink2:#ae0288;
+    --black1:#1d2b36;
+    --black2:#131623;
+    --black3: #323335;
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Rubik', sans-serif;
+    --custom-font1: 'santoshi';
+    --custom-font2: 'switzer';
+}
+.colorAnimation{
+    background: linear-gradient(-100deg, var(--blue), var(--pink1), var(--pink2));
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.main{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: var(--custom-font1);
+    background-color: white;
+}
+
+
+/* section 1 */
+
+.sec1{
+    height: 860px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/svg/homeBg.svg");
+    background-size: 90%;
+}
+
+
+.hero{
+    /* height: 860px; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.heroLeft{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.heroContent p{
+    color: var(--black3);
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.heroContent p span{
+    color: var(--pink2);
+    font-size: 65px;
+}
+
+
+.heroRight{
+    height: 100%;
+    width: 50%;
+}
+
+.heroLogo{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroLogo img{
+    margin-top: 130px;
+    height: 500px;
+    /* object-fit: scale-down; */
+}
+/* .logoPart1,.logoPart2,.logoPart3{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoPart2{
+    gap: 50px;
+}
+
+.logoPart3{
+    gap: 50px;
+} */
+
+.logoIcon{
+    background-color: var(--white1);
+    border-radius: 10%;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+    object-fit: scale-down;
+}
+
+
+
+/* section 2 */
+
+.sec2{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sec2Content{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec2Head{
+    height: 20%;
+    width: 100%;display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #1f80ff; */
+}
+
+.sec2Head p{
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--black3);
+}
+
+.sec2Swiper{
+    height: 90%;
+    width: 100%;
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 325px;
+}
+
+
+
+.storyCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--white3);
+    border-radius: 15px;
+}
+.cardImg{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .cardImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+} */
+
+
+
+
+
+.storyCard p{
+    font-size: 18px;
+    height: 60%;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.storyCard h5{
+    /* background-color: #1d2b36; */
+    font-size: 22px;
+    height: 10%;
+    width: 80%;
+    text-align: center;
+}
+.storyCard h6{
+    height: 10%;
+    width: 80%;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ============SECTION 3================ */
+
+.sec3{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sec3Content{
+    width: 80%; 
+    height: 100%;
+}
+
+.sec3Head{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec3Head p{
+    font-size: 36px;
+    color: var(--black3);
+    font-weight: 700;
+}
+
+.sec3Client{
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 70%;
+    display: grid;
+    gap: 30px 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.clientLogo{
+    background-color: var(--white2);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius: 20px;
+    height: 170px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clientLogo img{
+    height: 150px;
+    width: 150px;
+    object-fit: scale-down;
+}
+
+.clientLogo img:nth-child(2){
+    height: 10px;
+    object-fit: scale-down;
+}
+
+
+
+/* section 4 */
+
+.sec4{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sec4wrap{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black2);
+    transform: translateY(-50%);
+}
+
+.sec4Content{
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec4Box{
+    height: 80%;
+    width: 80%;
+    background-color: var(--black2);
+    /* border: 1px solid #a2a4a65e; */
+    border-radius: 20px;
+    box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sec4Box h1{
+    font-family: var(--custom-font1);
+    /* color: var(--black2); */
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.sec4Box a{
+    text-decoration: none;
+    color: var(--black2);
+    background-color: white;
+    padding: 10px 20px;
+    font-family: var(--custom-font1);
+    font-size: 28px;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: 0.8s;
+}
+
+.sec4Box h1 p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+/* Client */
+
+.client{
+    height: 100%;
+    width: 100%;
+    padding: 50px 0px;
+    /* background-color: white; */
+    /* background-color: var(--black2); */
+}
+
+.clientContent{
+    overflow: hidden;
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding: 0px 20px;
+    background-color: var(--black2);
+    /* background-color: white;*/
+    justify-content: center;
+    gap: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.clientHead{
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.clientHead h1{
+    color: white;
+    /* color: var(--black2); */
+    font-size: 52px;
+}
+
+.clientHead h1 span{
+    color: var(--pink2);
+}
+
+.clientHead p{
+    font-size: 16px;
+    word-spacing: 1px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    width: 45%;
+    color: white;
+    font-weight: 100;
+    /* opacity: 90%; */
+    /* color: var(--black2)    ; */
+}
+
+
+.clientlogo{
+    height: 100%;
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    /* align-self: flex-end; */
+    height: 150px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.clientimg{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clientGrow{
+    height: 150px;
+    object-fit: scale-down;
+}
+
+.clientimg img{
+    height: 110px;
+    object-fit: scale-down;
+    /* filter: grayscale(100%); */
+}
+
+.generic{
+    width: 100px;
+    object-fit: cover;
+}
+.sairam{
+    width: 150px;
+}
+.row2{
+    /* transform: translateX(50px); */
+    justify-content: center;
+}
+
+.row3{
+    /* transform: translateX(170px); */
+    justify-content: center;
+}
+.row4{
+    /* transform: translateX(330px); */
+    gap: 40px;
+    justify-content: center;
+}
+
+
+
+
+/* .row4{
+    transform: translateX(300px);
+} */
+
+/* ========Media Query============ */
+
+@media screen and (max-width: 600px) {
+    .sec1{
+        align-items: center;
+        justify-content: center;
+        background-size: 30%;
+    }
+    .hero{
+        height: 80%;
+        flex-direction: column;
+    }
+    .heroLeft{
+        width: 100%;
+    }
+
+
+    .heroRight{
+        width: 100%;
+    }
+    .heroLogo{
+        height: 100%;
+        width: 100%;
+        padding-top: 25px;
+    }
+    .heroLogo img{
+        height: 300px;
+        margin-top: 0px;
+    }
+    .heroContent p{
+        font-size: 35px;
+    }
+    .sec2Head{
+        width: 70%;
+    }
+    .sec2Head p {
+        font-size: 26px;
+        text-align: center;
+    }
+    .sec2Content{
+        width: 100%;
+        align-items: center;
+    }
+    swiper-container{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    swiper-slide{
+        height: 450px;
+        width: 300px;
+    }
+    .cardImg img{
+        overflow: hidden;
+        /* height: 70%; */
+    }
+    .storyCard p{
+        font-size: 16px;
+    }
+
+    .logo{
+        width: 100%;
+        gap: 15px 10px;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    .clientLogo{
+        height: 130px;
+        width: 130px;
+        box-shadow: none;
+    }
+
+    .clientLogo img {
+        height: 100px;
+        width: 100px;
+    }
+    .speLogo{
+        height: 180px;
+    }
+    .genric{
+        height: 100px;
+    }
+
+    .storyCard h5{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        font-size: 19px;
+    }
+    .sec4{
+        height: 300px;
+    }
+    .sec4Box{
+        width: 90%;
+        height: 80%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .sec4Box h1{
+        font-size: 22px;
+    }
+    .sec4Box h1 p{
+        font-size: 16px;
+    }
+    .sec4Box a{
+        font-size: 20px;
+        margin-top: 0px;
+    }
+    .sec4Content{
+        height: 100%;
+    }
+
+    .clientContent{
+        width: 100%;
+    }
+    .clientHead{
+        padding: 0px 10px;
+    }
+    .clientHead p{
+        width: 100%;
+    }
+    .row{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .row2,.row3{
+        transform: translateX(0);
+    }
+
+
+    .clientContent{
+        padding: 40px 20px;
+        border-radius: 0px;
+    }
+    .clientlogo{
+        gap: 40px;
+        align-items: center;
+    }
+    .nava {
+        display: none;
+    }
+    .row4{
+        transform: translate(0px,0px);
+    }
+    .sec4Content{
+        position: static;
+    }
+    .seenu{
+        height: 30px;
+    }
+    .kiyoLogo{
+        height: 50px;
+    }
+    .clientimg .seenuwhite{
+        height: 60px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1600px) and (orientation : portrait){
+    .heroContent p{
+        font-size: 42px;
+    }
+    .heroLogo img{
+        height: 300px;
+    }
+    .clientContent{
+        width: 100%;
+    }
+    .sec4Box{
+        width: 90%;
+        padding: 20px;
+    }
+    .sec4Box h1{
+        font-size: 22px;
+    }
+    .sec4Box a{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .clientimg .bstudio{
+        height: 100px;
+    }
+    .kiyoLogo{
+        height: 50px;
+    }
+    .speLogo{
+        height: 250px;
+    }
+    .seenu{
+        height: 65px;
+    }
+    .clientimg .exortix{
+        height: 85px;
+    }
+    .clientimg .waffle{
+        height: 80px;
+    }
+    .clientimg .evalley{
+        height: 180px;
+        padding-bottom: 25px;
+    }
+    .clientimg .seenuwhite{
+        height: 65px;
+        margin-left: -35px;
+    }
+
+    .clientimg .innov{
+        height: 150px;
+    }
+    .sec4Box h1 p {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 760px){
+    .sec4Box a:hover{
+        background-color: var(--black2);
+        color: var(--white1);
+        transition: 0.5s;
+        border: 1px solid var(--white1);
+    }
+}

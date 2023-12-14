@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'switzer';
+    src: url(../font/switzer/Switzer-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'santoshi';
+    src: url(../font/santoshi/Satoshi-Variable.ttf);
+}
+
+:root{
+    --white1: #FFF4F4;
+    --white2: #F5F5F5;
+    --white3: #a2a4a6;
+    --white4: #EEEEEE;
+    --blue: #1f80ff;
+    --pink1:#eb287b;
+    --pink2:#ae0288;
+    --black1:#1d2b36;
+    --black2:#131623;
+    --black3: #323335;
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Rubik', sans-serif;
+    /* --custom-font1: 'santoshi'; */
+    --custom-font1: 'switzer';
+    --custom-font2: 'switzer';
+    --testColor: #bebeff;
+}
+
+.colorAnimation{
+    background: linear-gradient(-100deg, var(--blue), var(--pink1), var(--pink2));
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.main{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* section 1 */
+
+.sec1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* .nav{
+    height: 70px;
+    width: 100%;
+} */
+
+.sec1Wrap{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.sec1WrapLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.leftBox{
+    height: 500px;
+    width: 70%;
+    background-color: var(--testColor);
+    border-radius: 0px 30px 30px 0px;
+    transform: translate(0px,-100px); 
+}
+
+.sec1WrapRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+
+.rightBox{
+    height: 400px;
+    width: 50%;
+    background-color: var(--testColor);
+    border-radius: 30px 0px 0px 30px;
+    transform: translate(0px,-40px); 
+}
+.heroSec{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.heroSecLeft{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.heroLeftContent{
+    padding: 40px;
+    height: 50%;
+    width: 60%;
+    background-color: white;
+    border: 0.5px solid #a2a4a62f;
+    border-radius: 50px;
+    box-shadow: rgba(75, 72, 72, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.heroLeftContent p{
+    font-family: var(--custom-font1);
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--black3);
+}
+
+.heroLeftContent p:nth-child(4){
+    font-size: 75px;
+    font-weight: 800;
+}
+
+.heroSecRight{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.heroRightContent{
+    height: 75%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroRightContent img{
+    height: 80%;
+    width: 80%;
+    object-fit: scale-down;
+}
+
+/* Section 2 */
+
+.sec2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2Content{
+    height: 100%;
+    width: 85%;
+}
+
+.sec2Head{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+
+.sec2Head h1{
+    font-size: 24px;
+    font-family: var(--custom-font1);
+    font-weight: 800;
+    color: var(--pink2);
+}
+
+.sec2Head p{
+    font-size: 50px;
+    font-family: var(--custom-font1);
+    font-weight: 800;
+    color: var(--black1);
+}
+
+
+.sec2Testimonials{
+    height: 100%;
+    width: 100%;
+    padding: 30px 30px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonialCard{
+    height: 270px;
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    background-color: var(--white4);
+    border: 1px solid var(--white4);
+    box-shadow: 23px 23px 10px -17px rgba(0, 0, 0, 0.1);
+}
+
+.cardLeft{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImg{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--black3);
+    /* background-color: var(--black3); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.cardImg img{
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* object-fit: contain; */
+    object-fit: scale-down;
+
+}
+.cardImg .saravanan{
+  height: 120%;
+  margin-top: 50px;
+}
+
+.cardQuotes{
+    height: 290px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    align-items: end;
+    position: absolute;
+}
+
+.cardQuotes img{
+    height: 65px;
+}
+
+
+.cardRight{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.3;
+    font-family: var(--custom-font1);
+    color: var(--black2);
+}
+.cardRightContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.star{
+    height: 20px;
+    display: flex;
+    gap: 4px;
+    color: var(--pink2);
+}
+
+.reviewHead{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.reviewName{
+    width: 50%;
+}
+
+.reviewHead h1{
+    font-size: 30px;
+    font-weight: 900;
+}
+.reviewHead p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.reviewLogo{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.reviewHead img{
+    height: 60px;
+    justify-self: end;
+    align-items: center;
+    object-fit: cover;
+}
+
+
+.review p{
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 80%;
+    width: 90%;
+    text-align: justify;
+}
+
+.dashLineRight{
+    display: none;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.dashLineRight img{
+    display: none;
+    height: 100%;
+    padding-right: 30px;
+    /* transform: translateY(-8px); */
+}
+
+.dashLineLeft{
+    display: none;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.dashLineLeft img{
+    display: none;
+    height: 100%;
+    padding-left: 20px;
+    /* transform: translateY(-8px); */
+}
+
+
+
+
+.kiyo{
+  height: 30px;
+}
+
+.reviewHead .speLogo{
+  height: 50px;
+}
+
+/*========= tab ========== */
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1600px) and (orientation : portrait){
+  .heroSecRight{
+    display: none;
+  }
+  .heroSecLeft{
+    width: 100%;
+  }
+  .sec2Content{
+    width: 95%;
+  }
+  .sec2Testimonials{
+    padding: 0;
+    padding-top: 100px;
+  }
+}
+
+
+
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .sec1{
+    /* height: 700px; */
+  }  
+  .sec1Wrap{
+    flex-direction: column;
+  }
+  .heroSec{
+    flex-direction: column-reverse;
+  }
+  .heroSecLeft{
+    width: 100%;
+  }
+  .heroSecRight{
+    width: 100%;
+  }
+  .heroRightContent{
+    margin-top: 100px;
+  }
+  .heroLeftContent{
+    padding: 23px;
+    height: 80%;
+    width: 80%;
+  }
+  .heroLeftContent p{
+    font-size: 40px;
+  }
+  .sec1WrapLeft{
+    width: 100%;
+  }
+  .sec1WrapRight{
+    /* display: none; */
+  }
+  .leftBox{
+    width: 100%;
+    height: 520px;
+    transform: translate(0px);
+    border-radius: 0%;
+  }
+  .rightBox{
+    display: none;
+  }
+  .sec2Head{
+    height: 215px;
+    padding: 0px 0px 25px 0px;
+  }
+  .sec2Testimonials{
+    padding: 0px 0px 30px 0px;
+    gap: 50px;
+  }
+  .testimonialCard{
+    height: 650px;
+    flex-direction: column;
+  }
+  .cardLeft{
+    width: 100%;
+    
+  }
+  .cardRight{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .review p{
+    width: 100%;
+  }
+  .reviewHead{
+    width: 100%;
+  }
+  .reviewHead h1{
+    font-size: 25px;
+  }
+  .reviewHead p{
+    font-size: 14px;
+  }
+  .reviewHead img{
+    height: 40px;
+  }
+  #simpleTrust{
+    height: 35px;
+  }
+  .reviewName{
+    width: 90%;
+  }
+}

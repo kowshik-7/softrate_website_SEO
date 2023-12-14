@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <!-- <link rel="shortcut icon" href="../assets/img/icon/logo.ico" type="image/x-icon"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/icon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <script type=module src="../assets/js/header_src.js"></script>
+</head>
+<body>
+    <div class="sec1">
+        <div id="header">
+
+        </div>
+
+
+        <div id="footer">
+
+        </div>
+    </div>
+
+
+
+
+    <!-- ============Java Script============ -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async>
+        $(function() {
+            $('#header').load("../assets/header/header.html", function() {
+                $.getScript("../assets/header/header.js", function() {
+                // Callback function after the script has loaded
+                });
+            });
+            $(function(){
+                $('#footer').load("../assets/footer/footer.html")
+            });
+        });
+
+    </script>
+</body>
+</html>
