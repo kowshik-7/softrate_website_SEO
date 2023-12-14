@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@500&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: var(--custom-font2);
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'switzer';
+    src: url(../font/switzer/Switzer-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'santoshi';
+    src: url(../font/santoshi/Satoshi-Variable.ttf);
+}
+
+:root{
+    --white1: #FFF4F4;
+    --white2: #F5F5F5;
+    --white3: #a2a4a6;
+    --body-color: hsl(220, 100%, 99%);
+    --blue: #1f80ff;
+    --pink1:#eb287b;
+    --pink2:#ae0288;
+    --black1:#1d2b36;
+    --black2:#131623;
+    --black3: #323335;
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Rubik', sans-serif;
+    --custom-font1: 'santoshi';
+    --custom-font2: 'switzer';
+}
+
+.colorAnimation{
+    background: linear-gradient(-100deg, var(--blue), var(--pink1), var(--pink2));
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.main{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--body-color);
+}
+
+
+/* =========Section 1============ */
+
+
+.sec1{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-colorw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/svg/homeBg.svg");
+    background-size: 90%;
+}
+.sec1Content{
+    height: 80%;
+    width: 80%;
+    /* background-color: #1d2b36; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sec1Content img{
+    height: 200px;
+    object-fit: scale-down;
+    transform: translateY(50px);
+}
+
+.sec1Content h1{
+    font-size: 42px;
+    color: var(--black3);
+}
+
+.sec1Content h1 span{
+    color: var(--pink2);
+    font-size: 52px;
+}
+
+.sec1Content p{
+    font-size: 18px;
+    color: var(--black3);
+}
+
+
+.heroBtn{
+    height: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.heroBtn a{
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: #1d2b36;
+    color: var(--body-color);
+    border-radius:60px;
+    display: flex;
+    align-items: center;
+}
+
+
+.hoverIcon{
+    transform: scale(0.2);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hoverIcon i{
+    transform: translateY(-50px);
+    color: var(--black2);
+    transition: 0.5s;
+    opacity: 0;
+}
+.btn:hover .hoverIcon{
+    transform: scale(1);
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn:hover .hoverIcon i{
+    transform: translateY(0%);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+
+/* ==========tools=========== */
+
+.tools{
+    padding: 20px 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolHead{
+    height: 80px;
+    text-align: center;
+}
+
+.toolHead h1{
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--black3);
+}
+
+.toolLogo{
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 70px 0px;
+    gap: 50px;
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toolLogo img{
+    height: 50px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.toolLogo img:hover{
+    filter: grayscale(0%);
+    transition: 0.1s;
+}
+
+
+
+
+
+/* =======Section 2========= */
+
+.sec2{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec2Content{
+    height: 90%;
+    width: 80%;
+}
+
+.sec2Head{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.sec2Head h1{
+    font-size: 44px;
+    color: var(--black3);
+    letter-spacing: 1.5px;
+}
+
+.sec2Card{
+    height: 200px;
+    width: 100%;
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card{
+    /* background-color: var(--body-color); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardBox{
+    padding: 10px;
+    height: 150px;
+    width: 95%;
+    border-radius: 18px;
+    background-color: var(--body-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.cardBox i{
+    flex: 1;
+    font-size: 50px;
+    color: var(--black3);
+}
+
+.boxContent{
+    flex: 1;
+    display: flex;
+}
+
+.boxContent p{
+    font-size: 20px;
+    width: 80%;
+    height: 100%;
+    color: var(--black3);
+}
+
+.boxContent i{
+    display: flex;
+    align-items: end;
+    justify-content: end;    
+    width: 20%;
+    height: 70px;
+    font-size: 36px;
+    color: var(--black3);
+
+    transition: 0.5s;
+}
+
+.cardBox:hover i{
+    font-size: 50px; 
+    transform: rotate(-180deg);
+    transition: 0.5s ease-in-out;
+}
+
+
+/* ======Section 3=========== */
+
+
+.sec3{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec3Content{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec3Head{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sec3Head h1{
+    font-size: 44px;
+    color: var(--black3);
+}
+
+.sec3Box{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+.sec3Left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sec3 ul{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+
+.sec3 ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--black3);
+    cursor: pointer;
+    /* flex-direction: column; */
+}
+
+.sec3 ul li i{
+    padding: 0px 15px;
+    color: var(--black3);
+}
+
+.iconWrap{
+    position: absolute;
+    transition: 0.3s;
+}
+
+.downContent{
+    font-size: 14px;
+    width: 30%;
+    letter-spacing: 1px;
+    position: absolute;
+    opacity: 0;
+    text-align: left;
+    transform: translateX(80px);
+}
+.sec3 ul li:hover .downContent{
+    opacity: 1;
+    transform: translate(80px,90%);
+    transition: 0.8s;
+}
+
+.sec3 ul li:hover .iconWrap{
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+
+.sec3Right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right3Box{
+    /* background-image: url(../img/SEO/20112744_13709.jpg); */
+    /* background-size: 100%; */
+    position: absolute;
+    height: 420px;
+    width: 400px;
+    border-radius: 25px;
+    background-color: var(--body-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url("../img/svg/homeBg.svg"); */
+}
+
+.quote{
+    height: 90%;
+    width: 100%;
+    padding: 25px;
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+}
+.quote p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.name{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0px 25px;
+}
+
+.sec3Wrap1{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/svg/homeBg.svg");
+    align-self: flex-start;
+    justify-self: baseline;
+    transform: translate(180px,-50px);
+    overflow: hidden;
+}
+
+.sec3Wrap2{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/svg/homeBg.svg");
+    align-self: flex-start;
+    justify-self: baseline;
+    transform: translate(-200px,300px);
+    overflow: hidden;
+}
+
+
+
+/* ======Section 4-========== */
+
+.sec4{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec4Content{
+    height: 90%;
+    width: 80%;
+    background-color: #1d2b36;
+}
+
+
+
+/* =========== tab  ============= */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1600px) and (orientation : portrait){
+    .hoverIcon{
+        display: none;
+    }
+    .heroBtn{
+        width: 85%;
+    }
+    .sec1Content h1{
+        text-align: center;
+    }
+    .sec2Card{
+        padding: 0;
+    }
+    .sec3Wrap1,.sec3Wrap2{
+        display: none;
+    }
+    .sec3Content{
+        width: 95%;
+    }
+    .sec3Box{
+        width: 96%;
+    }
+    .toolLogo{
+        /* gap: 20px; */
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .toolLogo img{
+        /* height: 20px; */
+    }
+}
+
+
+
+
+/* ===========Media Query========== */
+
+@media screen and (max-width: 600px){
+    .cardBox i{
+        font-size: 50px; 
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+    }
+    .sec1{
+        padding: 150px 0px;
+        height: 100vh;
+        background-size: 385%;
+    }
+    .sec1Content{
+        gap: 5px;
+    }
+    .sec1Content img{
+        display: none;
+    }
+    .sec1Content h1{
+        line-height: 1.1;
+    }
+    .heroBtn{
+        height: 100px;
+        width: 100%;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .hoverIcon{
+        display: none;
+    }
+    .sec2{
+        height: 100%;
+        /* margin-bottom: 20px; */
+    }
+    .sec2Card{
+        height: 100%;
+    }
+    .sec2Content{
+        width: 100%;
+    }
+    .sec2Card{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sec2Head{
+        height: 80px;
+    }
+
+    
+    .sec3{
+        height: 1000px;
+    }
+
+    .sec3Content{
+        width: 100%;
+        text-align: center;
+    }
+
+    .sec3Box{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .sec3Left{
+        width: 100%;
+        padding: 25px;
+    }
+
+    .sec3Head{
+        height: 10%;
+    }
+    .downContent{
+        display: none;
+        font-size: 12px;
+        width: 80%;
+        letter-spacing: 1px;
+        position: absolute;
+        opacity: 0;
+        text-align: left;
+        transform: translateX(50px);
+    }
+    .sec3 ul li:hover .downContent{
+        opacity: 1;
+        transform: translate(50px,90%);
+        transition: 0.8s;
+    }
+
+    .sec3Right{
+        width: 100%;
+        padding: 20px;
+    }
+    .quote p{
+        text-align: left;
+    }
+
+    .tools{
+        height: 100%;
+        gap: 25px;
+    }
+
+    .toolHead{
+        height: 40px;
+    } 
+    .toolLogo{
+        width: 70%;
+        display: grid;
+        gap: 50px;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .toolLogo img{
+        height: 60px;
+        width: 60px;
+        object-fit: scale-down;
+        filter: grayscale(0%);
+    }
+
+    .toolLogo .lg{
+        height: 80px;
+        width: 110px;
+    }
+
+    .toolHead h1{
+        font-size: 28px;
+    }
+
+    .sec3Wrap1,.sec3Wrap2{
+        display: none;
+    }
+
+    .right3Box{
+        width: 320px;
+    }
+}
